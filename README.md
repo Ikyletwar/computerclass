@@ -11,6 +11,12 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES2020-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Tanpa Framework](https://img.shields.io/badge/No%20Framework-100%25-mintcream?style=flat)]()
 
+<p align="center">
+  <img src="assets/og-cover.jpg" alt="XI TJKT SATU — Computerclass" width="860" />
+</p>
+
+</div>
+
 </div>
 
 ---
