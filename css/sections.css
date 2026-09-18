@@ -420,7 +420,8 @@
   .skills { grid-template-columns: repeat(12, 1fr); }
   .skill { grid-column: span 4; }
   .skill:nth-child(2),
-  .skill:nth-child(5) { transform: translateY(var(--space-4)); }
+  .skill:nth-child(5),
+  .skill:nth-child(8) { transform: translateY(var(--space-4)); }
 }
 
 .skill__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-3); }
