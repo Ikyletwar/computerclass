@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Berkas dan arsip resmi XI TJKT 1 — Teknik Jaringan Komputer & Telekomunikasi. Jaringan, server, dan kebersamaan dalam satu kelas." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <title>XI TJKT 1 — Coumputerclass</title>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <span class="preloader__counter">000</span>
+    <div class="preloader__bar"><div class="preloader__fill"></div></div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#beranda" class="nav__brand">
+        <span class="nav__mark">XI TJKT 1</span>
+        <span class="nav__sub">@coumputerclass</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navigasi utama">
+        <a class="nav__link" href="#beranda">Beranda</a>
+        <a class="nav__link" href="#tentang">Tentang</a>
+        <a class="nav__link" href="#materi">Materi</a>
+        <a class="nav__link" href="#siswa">Siswa</a>
+        <a class="nav__link" href="#galeri">Galeri</a>
+        <a class="nav__link" href="#gallery-kelas">Gallery Kelas</a>
+        <a class="nav__link" href="#jadwal">Jadwal</a>
+        <a class="nav__link" href="#kontak">Kontak</a>
+        <a class="nav__link" href="#creator">Creator</a>
+      </nav>
+
+      <a href="https://www.instagram.com/coumputerclass/" target="_blank" rel="noopener"
+         class="btn btn--ghost nav__cta magnetic">Instagram&nbsp;↗</a>
+
+      <button class="nav__toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" aria-hidden="true">
+    <nav aria-label="Menu ponsel">
+      <a class="menu__link" href="#beranda"><span>01</span>Beranda</a>
+      <a class="menu__link" href="#tentang"><span>02</span>Tentang</a>
+      <a class="menu__link" href="#materi"><span>03</span>Materi</a>
+      <a class="menu__link" href="#siswa"><span>04</span>Daftar Siswa</a>
+      <a class="menu__link" href="#galeri"><span>05</span>Galeri</a>
+      <a class="menu__link" href="#gallery-kelas"><span>06</span>Gallery Kelas</a>
+      <a class="menu__link" href="#jadwal"><span>07</span>Jadwal</a>
+      <a class="menu__link" href="#kontak"><span>08</span>Kontak</a>
+      <a class="menu__link" href="#creator"><span>09</span>Creator</a>
+    </nav>
+    <div class="menu__footer">
+      <span>@coumputerclass</span>
+      <span>SMK Negeri 1 Maluku Tengah</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="beranda">
+      <div class="grid-pattern" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__overline fade-wait">
+          <span class="overline">SMK Negeri 1 Maluku Tengah — Teknik Jaringan Komputer &amp; Telekomunikasi</span>
+          <span class="hero__line"></span>
+        </div>
+
+        <h1 class="hero__title heading-display">
+          <span class="hero__line-mask"><span>XI TJKT</span></span>
+          <span class="hero__line-mask"><span><em class="isem" data-scramble="SATU">SATU</em></span></span>
+        </h1>
+
+        <div class="hero__photo fade-wait" role="img" aria-label="Placeholder foto kelas XI TJKT 1">
+          <span class="hero__photo-corner hero__photo-corner--tl"></span>
+          <span class="hero__photo-corner hero__photo-corner--tr"></span>
+          <span class="hero__photo-corner hero__photo-corner--bl"></span>
+          <span class="hero__photo-corner hero__photo-corner--br"></span>
+          <div class="hero__photo-content">
+            <svg class="hero__photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.4"/></svg>
+            <span class="hero__photo-label">Foto Kelas XI TJKT 1</span>
+            <span class="hero__photo-hint">— ganti dengan foto asli —</span>
+          </div>
+        </div>
+
+        <div class="hero__row fade-wait">
+          <p class="hero__desc">
+            Sebuah ruang laboratorium daring — tempat <strong>kabel berbicara</strong>,
+            <strong>paket data berpindah</strong>, dan masa depan dirangkai
+            satu byte demi satu byte.
+          </p>
+          <div class="hero__meta">
+            <p><span>32</span> Siswa Aktif</p>
+            <p><span>6</span> Bidang Keahlian</p>
+            <p><span>100%</span> Praktik</p>
+          </div>
+        </div>
+
+        <div class="hero__cta fade-wait">
+          <a href="#tentang" class="btn btn--solid magnetic">Jelajahi Kelas <span class="btn__arrow">→</span></a>
+          <a href="https://www.instagram.com/coumputerclass/" target="_blank" rel="noopener"
+             class="btn btn--ghost magnetic">Instagram ↗</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Gulir</span><span class="hero__scroll-mark">↓</span>
+      </div>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Debian</span>
+        <span class="marquee__item">Cisco</span>
+        <span class="marquee__item">Linux</span>
+        <span class="marquee__item">Fiber Optik</span>
+        <span class="marquee__item">Docker</span>
+        <span class="marquee__item">Subnetting</span>
+        <span class="marquee__item">VLAN</span>
+        <span class="marquee__item">Packet Tracer</span>
+        <span class="marquee__item">DHCP</span>
+        <span class="marquee__item">DNS</span>
+        <span class="marquee__item">Web Server</span>
+        <span class="marquee__item">Firewall</span>
+        <span class="marquee__item">Routing</span>
+        <span class="marquee__item">IoT</span>
+      </div>
+    </div>
+
+    <!-- ===================== TENTANG ===================== -->
+    <section class="section" id="tentang">
+      <div class="container">
+        <div class="about__grid">
+          <div>
+            <span class="overline" data-reveal>01 — Tentang Kelas</span>
+            <p class="about__lead" data-reveal data-delay="120">
+              Bukan sekadar kelas — melainkan <em>laboratorium kecil</em>
+              tempat kami merakit keterampilan yang akan bertahan
+              lebih lama dari kabel tembaga.
+            </p>
+          </div>
+
+          <div class="about__side">
+            <div>
+              <p class="overline text-muted" data-reveal>Cerita Singkat</p>
+              <p class="text-dim u-mt-2" data-reveal data-delay="80">
+                XI TJKT 1 adalah keluarga kecil di balik akun
+                <a href="https://www.instagram.com/coumputerclass/" target="_blank" rel="noopener"
+                   class="link-underline">@coumputerclass</a>.
+                Kami menghabiskan hari-hari di ruang server, di balik kabel
+                UTP, dan di depan terminal — belajar bukan dari teori semata,
+                melainkan dari jaringan yang benar-benar kami bangun sendiri.
+              </p>
+              <p class="text-dim u-mt-2" data-reveal data-delay="160">
+                Dari instalasi sistem operasi server hingga menyambung serat
+                optik, setiap percobaan adalah langkah menuju satu tujuan:
+                <span class="text">menjadi teknisi yang tidak hanya paham, tapi juga bisa.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pengurus kelas -->
+        <div class="u-mt-6">
+          <span class="overline" data-reveal>Pengurus Kelas</span>
+          <div class="crew u-mt-3">
+            <article class="crewcard" data-reveal data-delay="0">
+              <span class="crewcard__num">01</span>
+              <div class="crewcard__photo" role="img" aria-label="Foto Wali Kelas">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+                <span class="crewcard__hint">Foto</span>
+              </div>
+              <p class="crewcard__role">01 — Wali Kelas</p>
+              <h3 class="crewcard__name">Hans Kapressy</h3>
+            </article>
+
+            <article class="crewcard" data-reveal data-delay="80">
+              <span class="crewcard__num">02</span>
+              <div class="crewcard__photo" role="img" aria-label="Foto Ketua Kelas">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+                <span class="crewcard__hint">Foto</span>
+              </div>
+              <p class="crewcard__role">02 — Ketua Kelas</p>
+              <h3 class="crewcard__name">Johanes T. Walalayo</h3>
+            </article>
+
+            <article class="crewcard" data-reveal data-delay="160">
+              <span class="crewcard__num">03</span>
+              <div class="crewcard__photo" role="img" aria-label="Foto Sekretaris">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+                <span class="crewcard__hint">Foto</span>
+              </div>
+              <p class="crewcard__role">03 — Sekretaris</p>
+              <h3 class="crewcard__name">Juliana Putri Sarak</h3>
+            </article>
+
+            <article class="crewcard" data-reveal data-delay="240">
+              <span class="crewcard__num">04</span>
+              <div class="crewcard__photo" role="img" aria-label="Foto Bendahara">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+                <span class="crewcard__hint">Foto</span>
+              </div>
+              <p class="crewcard__role">04 — Bendahara</p>
+              <h3 class="crewcard__name">Wievielt Grevanya Wattimena</h3>
+            </article>
+          </div>
+        </div>
+
+        <!-- Statistik -->
+        <div class="about__stats">
+          <div class="stat" data-reveal>
+            <p class="stat__num" data-count="32" data-suffix="+">0</p>
+            <p class="stat__label">Siswa Aktif</p>
+          </div>
+          <div class="stat" data-reveal data-delay="100">
+            <p class="stat__num" data-count="6" data-suffix="">0</p>
+            <p class="stat__label">Bidang Keahlian</p>
+          </div>
+          <div class="stat" data-reveal data-delay="200">
+            <p class="stat__num" data-count="10" data-suffix="+">0</p>
+            <p class="stat__label">Layanan Server</p>
+          </div>
+          <div class="stat" data-reveal data-delay="300">
+            <p class="stat__num" data-count="100" data-suffix="%">0</p>
+            <p class="stat__label">Berbasis Praktik</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MATERI ===================== -->
+    <section class="section section--border" id="materi">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="overline" data-reveal>02 — Bidang Keahlian</span>
+            <h2 class="heading-display" data-reveal data-delay="80">Yang kami pelajari</h2>
+          </div>
+          <span class="section__index" data-reveal data-delay="160">06 / Mapel Produktif</span>
+        </div>
+
+        <div class="skills">
+          <article class="skill card card--lift" data-reveal>
+            <span class="card__index">01</span>
+            <h3 class="card__title">Administrasi Sistem Jaringan</h3>
+            <p class="card__text">Instalasi &amp; pengelolaan sistem operasi server berbasis Debian / Linux dengan sepenuh hati.</p>
+            <ul class="skill__tags">
+              <li class="chip">Debian</li><li class="chip">Linux</li><li class="chip">User &amp; Group</li>
+            </ul>
+          </article>
+
+          <article class="skill card card--lift" data-reveal data-delay="100">
+            <span class="card__index">02</span>
+            <h3 class="card__title">Administrasi Layanan Jaringan</h3>
+            <p class="card__text">Menghadirkan layanan yang selalu siap melayani setiap permintaan dari jaringan.</p>
+            <ul class="skill__tags">
+              <li class="chip">DHCP</li><li class="chip">DNS</li><li class="chip">FTP</li><li class="chip">Web Server</li>
+            </ul>
+          </article>
+
+          <article class="skill card card--lift" data-reveal data-delay="200">
+            <span class="card__index">03</span>
+            <h3 class="card__title">Jaringan Kabel &amp; Nirkabel</h3>
+            <p class="card__text">Dari tembaga UTP hingga serat optik — kami merangkai jalur data yang andal.</p>
+            <ul class="skill__tags">
+              <li class="chip">RJ-45</li><li class="chip">Fiber Optik</li><li class="chip">Access Point</li>
+            </ul>
+          </article>
+
+          <article class="skill card card--lift" data-reveal>
+            <span class="card__index">04</span>
+            <h3 class="card__title">Keamanan Jaringan</h3>
+            <p class="card__text">Menjaga sistem tetap tegak di tengah lalu lintas dunia maya yang tak kenal henti.</p>
+            <ul class="skill__tags">
+              <li class="chip">Firewall</li><li class="chip">Monitoring</li><li class="chip">Analisis Trafik</li>
+            </ul>
+          </article>
+
+          <article class="skill card card--lift" data-reveal data-delay="100">
+            <span class="card__index">05</span>
+            <h3 class="card__title">Routing &amp; Switching</h3>
+            <p class="card__text">Menerjemahkan rute terbaik dari satu jaringan menuju jaringan lain.</p>
+            <ul class="skill__tags">
+              <li class="chip">Cisco</li><li class="chip">VLAN</li><li class="chip">Packet Tracer</li><li class="chip">Subnetting</li>
+            </ul>
+          </article>
+
+          <article class="skill card card--lift" data-reveal data-delay="200">
+            <span class="card__index">06</span>
+            <h3 class="card__title">Virtualisasi &amp; Cloud Dasar</h3>
+            <p class="card__text">Membungkus aplikasi dalam container yang ringan, cepat, dan mudah dikelola.</p>
+            <ul class="skill__tags">
+              <li class="chip">Docker</li><li class="chip">Container</li><li class="chip">Deployment</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--border" id="siswa">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <span class="overline" data-reveal>03 — Daftar Siswa</span>
+        <h2 class="heading-display" data-reveal data-delay="80">Anggota keluarga</h2>
+      </div>
+      <span class="section__index" data-reveal data-delay="160">29 / Siswa</span>
+    </div>
+
+    <div class="student-grid">
+      <article class="student" data-reveal data-delay="50">
+        <span class="student__num">01</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-01">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 01</h3>
+      </article>
+      <article class="student" data-reveal data-delay="100">
+        <span class="student__num">02</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-02">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 02</h3>
+      </article>
+      <article class="student" data-reveal data-delay="150">
+        <span class="student__num">03</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-03">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 03</h3>
+      </article>
+      <article class="student" data-reveal data-delay="200">
+        <span class="student__num">04</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-04">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 04</h3>
+      </article>
+      <article class="student" data-reveal data-delay="250">
+        <span class="student__num">05</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-05">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 05</h3>
+      </article>
+      <article class="student" data-reveal data-delay="300">
+        <span class="student__num">06</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-06">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 06</h3>
+      </article>
+      <article class="student" data-reveal data-delay="350">
+        <span class="student__num">07</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-07">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 07</h3>
+      </article>
+      <article class="student" data-reveal data-delay="0">
+        <span class="student__num">08</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-08">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 08</h3>
+      </article>
+      <article class="student" data-reveal data-delay="50">
+        <span class="student__num">09</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-09">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 09</h3>
+      </article>
+      <article class="student" data-reveal data-delay="100">
+        <span class="student__num">10</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-10">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 10</h3>
+      </article>
+      <article class="student" data-reveal data-delay="150">
+        <span class="student__num">11</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-11">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 11</h3>
+      </article>
+      <article class="student" data-reveal data-delay="200">
+        <span class="student__num">12</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-12">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 12</h3>
+      </article>
+      <article class="student" data-reveal data-delay="250">
+        <span class="student__num">13</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-13">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 13</h3>
+      </article>
+      <article class="student" data-reveal data-delay="300">
+        <span class="student__num">14</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-14">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 14</h3>
+      </article>
+      <article class="student" data-reveal data-delay="350">
+        <span class="student__num">15</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-15">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 15</h3>
+      </article>
+      <article class="student" data-reveal data-delay="0">
+        <span class="student__num">16</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-16">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 16</h3>
+      </article>
+      <article class="student" data-reveal data-delay="50">
+        <span class="student__num">17</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-17">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 17</h3>
+      </article>
+      <article class="student" data-reveal data-delay="100">
+        <span class="student__num">18</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-18">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 18</h3>
+      </article>
+      <article class="student" data-reveal data-delay="150">
+        <span class="student__num">19</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-19">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 19</h3>
+      </article>
+      <article class="student" data-reveal data-delay="200">
+        <span class="student__num">20</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-20">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 20</h3>
+      </article>
+      <article class="student" data-reveal data-delay="250">
+        <span class="student__num">21</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-21">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 21</h3>
+      </article>
+      <article class="student" data-reveal data-delay="300">
+        <span class="student__num">22</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-22">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 22</h3>
+      </article>
+      <article class="student" data-reveal data-delay="350">
+        <span class="student__num">23</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-23">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 23</h3>
+      </article>
+      <article class="student" data-reveal data-delay="0">
+        <span class="student__num">24</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-24">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 24</h3>
+      </article>
+      <article class="student" data-reveal data-delay="50">
+        <span class="student__num">25</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-25">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 25</h3>
+      </article>
+      <article class="student" data-reveal data-delay="100">
+        <span class="student__num">26</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-26">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 26</h3>
+      </article>
+      <article class="student" data-reveal data-delay="150">
+        <span class="student__num">27</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-27">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 27</h3>
+      </article>
+      <article class="student" data-reveal data-delay="200">
+        <span class="student__num">28</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-28">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 28</h3>
+      </article>
+      <article class="student" data-reveal data-delay="250">
+        <span class="student__num">29</span>
+        <div class="student__photo" role="img" aria-label="Foto siswa ke-29">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a7 7 0 0 1 14 0V20"/></svg>
+          <span class="student__photo-hint">Foto</span>
+        </div>
+        <h3 class="student__name">Nama Siswa 29</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===================== GALERI ===================== -->
+    <section class="section section--border" id="galeri">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="overline" data-reveal>04 — Arsip Galeri</span>
+            <h2 class="heading-display" data-reveal data-delay="80">Kandang lab kami</h2>
+          </div>
+          <span class="section__index" data-reveal data-delay="160">07 / Dokumentasi</span>
+        </div>
+
+        <div class="gallery">
+          <button class="tile tile--wide" data-caption="Praktik instalasi sistem operasi server Debian di ruang server lab.">
+            <span class="tile__tag">01 — Server</span>
+            <span class="tile__art">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="3"/><rect x="4" y="10.5" width="16" height="3"/><rect x="4" y="17" width="16" height="3"/><circle cx="7" cy="5.5" r="0.6"/><circle cx="7" cy="12" r="0.6"/><circle cx="7" cy="18.5" r="0.6"/><circle cx="18.5" cy="5.5" r="0.6"/><circle cx="18.5" cy="12" r="0.6"/><circle cx="18.5" cy="18.5" r="0.6"/></svg>
+            </span>
+            <span class="tile__caption">Praktik instalasi server Debian di ruang server lab.</span>
+          </button>
+
+          <button class="tile" data-caption="Konfigurasi switch Cisco — menerapkan VLAN untuk tiap lantai.">
+            <span class="tile__tag">02 — Cisco</span>
+            <span class="tile__art">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9h9l1 3 1-3h9v6H2z"/><path d="M4 12v3h16v-3"/><circle cx="12" cy="9" r="1"/><path d="M6 17h2M16 17h2"/></svg>
+            </span>
+            <span class="tile__caption">Konfigurasi switch Cisco — VLAN untuk tiap lantai.</span>
+          </button>
+
+          <button class="tile" data-caption="Ujian crimping kabel RJ-45 dan urutan kabel straight / cross.">
+            <span class="tile__tag">03 — Ujian</span>
+            <span class="tile__art">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8M9 3v8a3 3 0 0 0 6 0V3M12 14v5M9 22h6"/><path d="M7 8H5a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3M17 8h2a1 1 0 0 1 1 1v2a3 3 0 0 1-3 3"/></svg>
+            </span>
+            <span class="tile__caption">Ujian crimping RJ-45 — straight &amp; cross.</span>
+          </button>
+
+          <button class="tile" data-caption="Simulasi topologi jaringan kelas di Cisco Packet Tracer.">
+            <span class="tile__tag">04 — Simulasi</span>
+            <span class="tile__art">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7.2 11.5 16.8 6.8M7.2 12.5l9.6 5"/></svg>
+            </span>
+            <span class="tile__caption">Simulasi topologi di Cisco Packet Tracer.</span>
+          </button>
+
+          <button class="tile tile--wide" data-caption="Workshop Docker — membungkus aplikasi ke dalam container.">
+            <span class="tile__tag">05 — Workshop</span>
+            <span class="tile__art">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M4 12h16M12 9V6M9 6h6M7 16h.01M11 16h.01M15 16h.01"/></svg>
+            </span>
+            <span class="tile__caption">Workshop Docker — aplikasi di dalam container.</span>
+          </button>
+
+          <button class="tile" data-caption="Fusion splicing serat optik — menyatukan dua ujung cahaya.">
+            <span class="tile__tag">06 — Fiber</span>
+            <span class="tile__art">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M4.9 4.9l14.2 14.2M12 21a9 9 0 0 1 0-18"/></svg>
+            </span>
+            <span class="tile__caption">Fusion splicing serat optik.</span>
+          </button>
+
+          <button class="tile tile--wide" data-caption="Foto bersama keluarga besar XI TJKT 1 — SMK Negeri 1 Maluku Tengah.">
+            <span class="tile__tag">07 — Kelas</span>
+            <span class="tile__art">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 20v-1.5a3.5 3.5 0 0 1 7 0V20"/></svg>
+            </span>
+            <span class="tile__caption" style="padding-bottom: var(--space-3);">
+              Foto bersama keluarga besar XI TJKT 1 — ganti dengan foto asli.
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau galeri">
+      <button class="lightbox__close" aria-label="Tutup">✕</button>
+      <button class="lightbox__prev" aria-label="Sebelumnya">←</button>
+      <button class="lightbox__next" aria-label="Berikutnya">→</button>
+      <div>
+        <div class="lightbox__frame"></div>
+        <p class="lightbox__caption"></p>
+      </div>
+    </div>
+
+    <section class="section section--border" id="gallery-kelas">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <span class="overline" data-reveal>05 — Gallery Kelas</span>
+        <h2 class="heading-display" data-reveal data-delay="80">Dinding foto kelas</h2>
+      </div>
+      <span class="section__index" data-reveal data-delay="160">06 / Foto</span>
+    </div>
+
+    <div class="classwall" data-reveal>
+      <button class="tile" style="aspect-ratio: 3/4;" data-caption="Orientasi hari pertama — wajah-wajah baru, satu kelas baru.">
+        <span class="tile__tag">01 — Momen</span>
+        <span class="tile__art">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.4"/></svg>
+        </span>
+        <span class="tile__caption">Orientasi hari pertama — wajah-wajah baru.</span>
+      </button>
+
+      <button class="tile" style="aspect-ratio: 1/1;" data-caption="Bersama di depan ruang server lab.">
+        <span class="tile__tag">02 — Momen</span>
+        <span class="tile__art">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="3"/><rect x="4" y="10.5" width="16" height="3"/><rect x="4" y="17" width="16" height="3"/><circle cx="7" cy="5.5" r="0.6"/><circle cx="7" cy="12" r="0.6"/><circle cx="18.5" cy="12" r="0.6"/><circle cx="18.5" cy="17" r="0.6" /></svg>
+        </span>
+        <span class="tile__caption">Bersama di depan ruang server lab.</span>
+      </button>
+
+      <button class="tile" style="aspect-ratio: 3/4;" data-caption="Foto bersama satu kelas selepas praktik kabel.">
+        <span class="tile__tag">03 — Momen</span>
+        <span class="tile__art">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="2.6"/><circle cx="17" cy="9" r="2"/><path d="M4 19v-1.2a5 5 0 0 1 10 0V19M14 19v-1a3 3 0 0 1 6 0v1"/></svg>
+        </span>
+        <span class="tile__caption">Foto bersama selepas praktik kabel.</span>
+      </button>
+
+      <button class="tile" style="aspect-ratio: 16/10;" data-caption="Kamis pagi — jadwal produktif dimulai.">
+        <span class="tile__tag">04 — Momen</span>
+        <span class="tile__art">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="1.5"/><path d="M3 9h18M8 2v4M16 2v4M7 13h3M14 13h3M7 16.5h3M14 16.5h3" /></svg>
+        </span>
+        <span class="tile__caption">Kamis pagi — jadwal produktif dimulai.</span>
+      </button>
+
+      <button class="tile" style="aspect-ratio: 1/1;" data-caption="Lingkar belajar mingguan di halaman sekolah.">
+        <span class="tile__tag">05 — Momen</span>
+        <span class="tile__art">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8"/></svg>
+        </span>
+        <span class="tile__caption">Lingkar belajar mingguan.</span>
+      </button>
+
+      <button class="tile" style="aspect-ratio: 16/10;" data-caption="Sesi terakhir sebelum libur — tepuk tangan untuk kerja keras.">
+        <span class="tile__tag">06 — Momen</span>
+        <span class="tile__art">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><path d="M6 6a12 12 0 0 0 12 0M6 18a12 12 0 0 1 12 0" /></svg>
+        </span>
+        <span class="tile__caption">Sesi terakhir sebelum libur.</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===================== JADWAL ===================== -->
+    <section class="section section--border" id="jadwal">
+      <div class="container">
+        <div class="schedule__wrap">
+          <div class="schedule__intro">
+            <span class="overline" data-reveal>06 — Perjalanan</span>
+            <h2 class="heading-display" data-reveal data-delay="80">Jadwal<br />kegiatan kelas</h2>
+            <p class="text-muted u-mt-2" data-reveal data-delay="160">
+              Satu tahun, banyak koneksi. Ini peta perjalanan kelas kami
+              — dari kabel pertama hingga proyek terakhir.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__item" data-reveal>
+              <span class="timeline__date">Awal Tahun — MPLS</span>
+              <h3 class="timeline__title">Konsolidasi Kelas</h3>
+              <p class="timeline__desc">Perkenalan rekan sekelas, penentuan pengurus, dan penyusunan visi kelas.</p>
+            </div>
+            <div class="timeline__item" data-reveal data-delay="80">
+              <span class="timeline__date">Jul — Agu</span>
+              <h3 class="timeline__title">Dasar Jaringan &amp; Topologi</h3>
+              <p class="timeline__desc">Model OSI, IP addressing, dan subnetting — dari hitungan di kertas hingga kabel sungguhan.</p>
+            </div>
+            <div class="timeline__item" data-reveal data-delay="160">
+              <span class="timeline__date">Sep — Okt</span>
+              <h3 class="timeline__title">Laboratorium Linux</h3>
+              <p class="timeline__desc">Instalasi Debian, pengelolaan user dan group, serta administrasi sistem pertama kami.</p>
+            </div>
+            <div class="timeline__item" data-reveal data-delay="240">
+              <span class="timeline__date">Nov — Des</span>
+              <h3 class="timeline__title">Layanan Jaringan</h3>
+              <p class="timeline__desc">DHCP, DNS, FTP, dan web server mulai hidup dan saling berbicara di dalam jaringan lab.</p>
+            </div>
+            <div class="timeline__item" data-reveal data-delay="320">
+              <span class="timeline__date">Jan — Apr</span>
+              <h3 class="timeline__title">Proyek Akhir Kelas</h3>
+              <p class="timeline__desc">Merakit topologi mini, mengamankan jaringan, lalu mendemokannya di depan teman satu kelas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAK ===================== -->
+    <section class="cta section--border" id="kontak">
+      <div class="grid-pattern" style="mask-image: radial-gradient(ellipse 70% 60% at 50% 100%, black 45%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 100%, black 45%, transparent 100%);" aria-hidden="true"></div>
+
+      <div class="container container--small">
+        <span class="overline" data-reveal>07 — Kontak &amp; Sosial</span>
+        <h2 class="cta__title heading-display" data-reveal data-delay="80">
+          Ikuti perjalanan kami — <em>satu koneksi</em> pada satu waktu.
+        </h2>
+        <p class="cta__sub text-muted" data-reveal data-delay="160">
+          <a href="https://www.instagram.com/coumputerclass/" target="_blank" rel="noopener" class="link-underline">@coumputerclass</a>
+          adalah arsip kelas T-J-K-T satu: dokumentasi praktik, ujian,
+          dan kebersamaan yang tidak ingin kami lewatkan.
+        </p>
+        <div data-reveal data-delay="240">
+          <a href="https://www.instagram.com/coumputerclass/" target="_blank" rel="noopener"
+             class="btn btn--solid btn--lg magnetic">Buka Instagram <span class="btn__arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CREATOR ===================== -->
+    <section class="section section--border" id="creator">
+      <div class="container">
+        <div class="creator__grid">
+          <div data-reveal>
+            <div class="creator__photo creator__photo--img">
+              <img src="assets/Hizkia_Letwar.jpeg" alt="Foto Hizkia Letwar" loading="lazy" />
+            </div>
+          </div>
+
+          <div>
+            <span class="overline" data-reveal>08 — Creator</span>
+            <h2 class="heading-display creator__name" data-reveal data-delay="80">Hizkia Letwar</h2>
+            <p class="creator__role" data-reveal data-delay="140">Pembuat situs kelas XI TJKT 1</p>
+            <p class="creator__bio text-muted" data-reveal data-delay="200">
+              Tangan-tangan di balik halaman ini — merangkai kode, foto, dan
+              cerita kelas agar semua orang bisa melihat seberapa jauh kami melangkah.
+            </p>
+
+            <div class="creator__social" data-reveal data-delay="260">
+              <a class="social-btn" href="https://github.com/ikyletwar" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a class="social-btn" href="https://www.instagram.com/ikyletwar/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6"/></svg>
+                <span>Instagram</span>
+              </a>
+              <a class="social-btn" href="https://www.tiktok.com/@ikyletwar" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                <span>TikTok</span>
+              </a>
+              <a class="social-btn" href="https://wa.me/6281227237338" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="nav__mark">XI TJKT 1</span>
+          <p class="footer__desc">
+            SMK Negeri 1 Maluku Tengah — Kelas Teknik Jaringan Komputer
+            &amp; Telekomunikasi. Belajar jaringan, membangun masa depan,
+            dan saling menguatkan.
+          </p>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Navigasi</h4>
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#materi">Materi</a>
+            <a href="#siswa">Siswa</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#gallery-kelas">Gallery Kelas</a>
+            <a href="#jadwal">Jadwal</a>
+          </div>
+          <div class="footer__col">
+            <h4>Sosial</h4>
+            <a href="https://www.instagram.com/coumputerclass/" target="_blank" rel="noopener">Instagram ↗</a>
+            <a href="#kontak">Kontak</a>
+          </div>
+          <div class="footer__col">
+            <h4>Teknologi</h4>
+            <li>HTML · CSS · JS murni</li>
+            <li>Custom CSS</li>
+            <li>Tanpa framework</li>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 XI TJKT 1 — @coumputerclass</span>
+        <span>Dibuat dengan <span class="footer__heart">♥</span> di laboratorium jaringan</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Musik latar -->
+  <audio id="music" src="music/Coracao_Maloqueiro.mp3" loop preload="auto"></audio>
+
+  <button id="music-toggle" class="music-dock" aria-label="Putar atau jeda musik" aria-pressed="false">
+    <span class="music-dock__eq" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span class="music-dock__label">Coracao Maluqueiro</span>
+    <span class="music-dock__icon" aria-hidden="true">
+      <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+    </span>
+  </button>
+
+  <div class="music-toast" id="music-toast" role="status" aria-live="polite">
+    <span class="music-toast__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+    </span>
+    <span class="music-toast__dot" aria-hidden="true"></span>
+    <span class="music-toast__msg">Musik aktif — Coracao Maluqueiro</span>
+  </div>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

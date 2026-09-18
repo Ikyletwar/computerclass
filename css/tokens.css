@@ -1,0 +1,69 @@
+/* ============================================================
+   XI TJKT 1 — DESIGN TOKENS
+   Semua warna monokrom. Ubah palet cukup di sini.
+   ============================================================ */
+
+:root {
+  /* ——— Warna (monokrom) ——— */
+  --bg:            #0a0a0b;
+  --bg-soft:       #0e0e10;
+  --surface:       #141416;
+  --surface-2:     #1b1b1e;
+  --line:          #232326;   /* hairline border */
+  --line-strong:   #333338;
+
+  --text:          #f2f2f3;   /* putih hampir murni */
+  --text-muted:    #8b8b90;   /* abu */
+  --text-dim:      #5c5c61;   /* abu gelap */
+  --text-faint:    #3c3c40;
+
+  --white:         #ffffff;
+  --black:         #000000;
+
+  /* ——— Tipografi ——— */
+  --font-display:  "Fraunces", "Georgia", serif;
+  --font-body:     "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono:     "Space Mono", "Courier New", monospace;
+
+  --fs-h1: clamp(3rem, 9vw, 8rem);
+  --fs-h2: clamp(2rem, 4.5vw, 3.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.6rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fs-label: 0.7rem;
+
+  --tracking-tight: -0.04em;
+  --tracking-normal: -0.01em;
+  --tracking-wide: 0.12em;
+  --tracking-mega: 0.35em;
+
+  /* ——— Ritme & Radius ——— */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+  --space-8: 8rem;
+
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-full: 999px;
+
+  /* ——— Gerak ——— */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io:       cubic-bezier(0.77, 0, 0.18, 1);
+  --dur-fast:      240ms;
+  --dur:           560ms;
+  --dur-slow:      900ms;
+
+  /* ——— Lapisan ——— */
+  --z-cursor:      1000;
+  --z-preloader:   2000;
+  --z-nav:         100;
+  --z-menu:        120;
+  --z-lightbox:    1500;
+}
