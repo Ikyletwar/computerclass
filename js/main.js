@@ -305,6 +305,7 @@
         if (svg) frame.appendChild(svg.cloneNode(true));
       }
       caption.textContent = t.dataset.caption || "";
+      caption.style.display = t.dataset.caption ? "" : "none";
       lb.classList.add("is-open");
       document.body.style.overflow = "hidden";
     };
