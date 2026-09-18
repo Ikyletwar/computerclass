@@ -293,9 +293,17 @@
     const show = (i) => {
       idx = (i + tiles.length) % tiles.length;
       const t = tiles[idx];
-      const svg = t.querySelector(".tile__art svg");
       frame.innerHTML = "";
-      frame.appendChild(svg.cloneNode(true));
+      const img = t.querySelector("img");
+      if (img) {
+        const im = document.createElement("img");
+        im.src = img.getAttribute("src");
+        im.alt = img.getAttribute("alt") || "";
+        frame.appendChild(im);
+      } else {
+        const svg = t.querySelector(".tile__art svg");
+        if (svg) frame.appendChild(svg.cloneNode(true));
+      }
       caption.textContent = t.dataset.caption || "";
       lb.classList.add("is-open");
       document.body.style.overflow = "hidden";
