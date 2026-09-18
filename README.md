@@ -1,6 +1,6 @@
 <div align="center">
 
-# COUMPUTERCLASS — Website XI TJKT 1
+# COMPUTERCLASS — Website XI TJKT 1
 
 **SMK Negeri 1 Maluku Tengah · Teknik Jaringan Komputer & Telekomunikasi**
 
@@ -18,7 +18,7 @@
 ## — Tentang — 
 
 Website resmi kelas **XI TJKT 1** — keluarga kecil di balik akun
-[`@coumputerclass`](https://www.instagram.com/coumputerclass/). Sebuah ruang
+[`@computerclass`](https://www.instagram.com/computerclass/). Sebuah ruang
 laboratorium daring tempat kabel berbicara, paket data berpindah, dan masa
 depan dirangkai satu byte demi satu byte.
 
@@ -153,6 +153,6 @@ dimatikan otomatis.
 
 <div align="center">
 
-© 2026 XI TJKT 1 · [`@coumputerclass`](https://www.instagram.com/coumputerclass/) · Dibuat dengan ♥ di laboratorium jaringan.
+© 2026 XI TJKT 1 · [`@computerclass`](https://www.instagram.com/computerclass/) · Dibuat dengan ♥ di laboratorium jaringan.
 
 </div>
