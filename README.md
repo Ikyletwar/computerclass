@@ -24,7 +24,7 @@
 ## — Tentang — 
 
 Website resmi kelas **XI TJKT 1** — keluarga kecil di balik akun
-[`@computerclass`](https://www.instagram.com/computerclass/). Sebuah ruang
+[`@coumputerclass`](https://www.instagram.com/coumputerclass/). Sebuah ruang
 laboratorium daring tempat kabel berbicara, paket data berpindah, dan masa
 depan dirangkai satu byte demi satu byte.
 
@@ -159,6 +159,6 @@ dimatikan otomatis.
 
 <div align="center">
 
-© 2026 XI TJKT 1 · [`@computerclass`](https://www.instagram.com/computerclass/) · Dibuat dengan ♥ di laboratorium jaringan.
+© 2026 XI TJKT 1 · [`@coumputerclass`](https://www.instagram.com/coumputerclass/) · Dibuat dengan ♥ di laboratorium jaringan.
 
 </div>
