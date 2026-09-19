@@ -851,26 +851,27 @@
   line-height: 1.45;
 }
 
-/* ——— Gallery Kelas (dinding foto) ——— */
+/* ——— Gallery Kelas (dinding foto) ———
+   pakai GRID (bukan CSS columns) — kolom/kolom + img rentan bug
+   tinggi 0 di iOS Safari -> foto hitam/kolaps */
 .classwall {
-  columns: 1;
-  column-gap: var(--space-2);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
 }
 
 @media (min-width: 641px) {
-  .classwall { columns: 2; }
+  .classwall { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 981px) {
-  .classwall { columns: 3; }
+  .classwall { grid-template-columns: repeat(3, 1fr); }
 }
 
 .classwall .tile {
-  display: inline-block;
+  display: block;
   width: 100%;
-  aspect-ratio: auto;
-  margin-bottom: var(--space-2);
-  break-inside: avoid;
+  margin: 0;
 }
 
 /* ——— Foto (Galeri Kelas) ——— */
@@ -884,14 +885,6 @@
   filter: grayscale(100%) contrast(1.05);
   transition: filter var(--dur) var(--ease-out),
               transform 1.1s var(--ease-out);
-}
-
-/* di classwall, foto dibuat in-flow (tinggi = rasio asli foto):
-   rapi untuk masonry & menghindari bug lazy-load/kolom di HP */
-.classwall .tile--photo img {
-  position: relative;
-  inset: auto;
-  height: auto;
 }
 
 @media (hover: hover) and (pointer: fine) {
