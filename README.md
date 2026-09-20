@@ -15,7 +15,9 @@
   <img src="assets/og-cover.jpg" alt="XI TJKT SATU — Computerclass" width="860" />
 </p>
 
-</div>
+<p align="center">
+  <img src="assets/galeri/17.jpg" alt="Galeri XI TJKT 1 — foto 17" width="640" />
+</p>
 
 </div>
 
@@ -39,7 +41,7 @@ library UI, tanpa build step. Cukup buka dan langsung jalan.
 | 📱 **Responsif** | **Mobile-first** — dioptimalkan untuk layar sentuh, tap target ≥44px, safe-area iOS |
 | 🎬 **Animasi** | Preloader counter, reveal-on-scroll, hero line-mask, marquee, staggered menu, shimmer cards |
 | ✨ **Micro-interaksi** | Custom cursor (blend-difference), tombol *magnetic*, teks *scramble*, scramble di hover |
-| 🎵 **Musik** | Autoplay + loop (`music/Coracao_Maloqueiro.mp3`), dock player equalizer, toast notifikasi |
+| 🎵 **Musik** | Autoplay + loop, 2 lagu pilihan (Mrs Magic & Coracao Maloqueiro), dock player equalizer, menu settings, toast notifikasi |
 | 👥 **Konten** | Tentang, Pengurus Kelas, Daftar Siswa (29 siswa), Galeri Lab, Gallery Kelas, Jadwal, Creator |
 | 🖼️ **Galeri** | Tile + lightbox dengan navigasi keyboard `←` `/` `→` `/` `Esc` |
 | ♿ **Aksesibilitas** | `prefers-reduced-motion`, aria-label, semantik HTML, fokus keyboard |
@@ -68,9 +70,11 @@ XI_TJKT1/
 │   └── main.js           # Semua interaksi (moduler, terkomentari)
 ├── assets/
 │   ├── favicon.svg
-│   └── Hizkia_Letwar.jpeg # Foto creator
+│   ├── Hizkia_Letwar.jpeg # Foto creator
+│   └── galeri/            # Foto kegiatan (20 tile)
 ├── music/
-│   └── Coracao_Maloqueiro.mp3
+│   ├── Coracao_Maloqueiro.mp3
+│   └── Mrs_Magic.mp3
 └── README.md
 ```
 
@@ -103,16 +107,18 @@ python3 -m http.server 8080
 | **Daftar 29 siswa** | `index.html` → section `id="siswa"` (kartu `Nama Siswa XX`) |
 | **Foto siswa/pengurus** | Ganti isi `.student__photo` / `.crewcard__photo` dengan `<img>` |
 | **Galeri** | Section `id="galeri"` & `id="gallery-kelas"` (tile + caption) |
-| **Musik** | Ganti file di `music/`, sesuaikan `src` pada `<audio id="music">` |
-| **Judul lagu & toast** | `js/main.js` → konstanta `TITLE = "..."` |
+| **Musik** | Tambah file di `music/`, lalu daftarkan lagu di `js/main.js` → objek `TRACKS` |
+| **Judul lagu & pilihan** | `js/main.js` → objek `TRACKS` (file + judul), default di `DEFAULT_KEY` |
 | **Link sosial creator** | Section `id="creator"` → tombol `.social-btn` |
 | **Warna & font** | Satu-satunya file: `css/tokens.css` |
 | **Nomor statistik** | `index.html` → `data-count` pada `.stat__num` |
 
 ## — Musik & Kebijakan Autoplay —
 
-Lagu `Coracao_Maloqueiro.mp3` diputar otomatis saat halaman dibuka dan
-mengulang (`loop`) sampai halaman ditutup.
+Musik diputar otomatis saat halaman dibuka dan mengulang (`loop`) sampai
+halaman ditutup. Default:**Mrs Magic** — bisa diganti ke **Coracao Maloqueiro**
+lewat menu *Settings Musik* (gear di navbar desktop, atau item di menu
+hamburger di HP). Pilihan tersimpan di `localStorage`.
 
 **Catatan penting:** browser modern (Chrome, Safari, Firefox, Edge) memblokir
 autoplay bersuara tanpa interaksi pengguna. Strategi yang dipakai:

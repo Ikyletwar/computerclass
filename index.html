@@ -73,6 +73,13 @@
       <a href="https://www.instagram.com/coumputerclass/" target="_blank" rel="noopener"
          class="btn btn--ghost nav__cta magnetic">Instagram&nbsp;↗</a>
 
+      <button id="nav-settings-toggle" class="nav__settings" aria-label="Buka pengaturan musik" aria-haspopup="dialog" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+        </svg>
+      </button>
+
       <button class="nav__toggle" aria-label="Buka menu" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -91,6 +98,9 @@
       <a class="menu__link" href="#jadwal"><span>07</span>Jadwal</a>
       <a class="menu__link" href="#kontak"><span>08</span>Kontak</a>
       <a class="menu__link" href="#creator"><span>09</span>Creator</a>
+      <button class="menu__link menu__settings" id="menu-settings" aria-expanded="false">
+        <span>10</span>Settings Musik
+      </button>
     </nav>
     <div class="menu__footer">
       <span>@coumputerclass</span>
@@ -935,11 +945,33 @@
   </footer>
 
   <!-- Musik latar -->
-  <audio id="music" src="music/Coracao_Maloqueiro.mp3" loop preload="auto"></audio>
+  <audio id="music" src="music/Mrs_Magic.mp3" loop preload="auto"></audio>
+
+  <!-- Panel settings: ganti lagu -->
+  <div class="settings" id="settings-panel" role="dialog" aria-label="Pengaturan musik" aria-modal="false" aria-hidden="true">
+    <div class="settings__header">
+      <span class="settings__title">Settings Musik</span>
+      <button class="settings__close" id="settings-close" aria-label="Tutup pengaturan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <h5 class="settings__label">Pilih Lagu Latar</h5>
+    <div class="settings__list">
+      <button class="settings__item is-active" data-song="mrs-magic" aria-pressed="true">
+        <span class="settings__eq" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="settings__name">Mrs Magic</span>
+        <span class="settings__badge">Lagu bawaan</span>
+      </button>
+      <button class="settings__item" data-song="coracao" aria-pressed="false">
+        <span class="settings__eq" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="settings__name">Coracao Maloqueiro</span>
+      </button>
+    </div>
+  </div>
 
   <button id="music-toggle" class="music-dock" aria-label="Putar atau jeda musik" aria-pressed="false">
     <span class="music-dock__eq" aria-hidden="true"><span></span><span></span><span></span></span>
-    <span class="music-dock__label">Coracao Maluqueiro</span>
+    <span class="music-dock__label">Mrs Magic</span>
     <span class="music-dock__icon" aria-hidden="true">
       <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
@@ -951,7 +983,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
     </span>
     <span class="music-toast__dot" aria-hidden="true"></span>
-    <span class="music-toast__msg">Musik aktif — Coracao Maluqueiro</span>
+    <span class="music-toast__msg">Musik aktif — Mrs Magic</span>
   </div>
 
   <!-- JS -->

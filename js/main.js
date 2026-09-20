@@ -110,6 +110,7 @@
       document.body.classList.toggle("menu-open", state);
       document.body.style.overflow = state ? "hidden" : "";
       toggle.setAttribute("aria-expanded", String(state));
+      if (state) document.dispatchEvent(new CustomEvent("xijtkt1:close-settings"));
     };
 
     toggle.addEventListener("click", () =>
@@ -342,7 +343,19 @@
     const msg = $(".music-toast__msg", toast);
     if (!audio || !dock) return;
 
-    const TITLE = "Coracao Maluqueiro";
+    /* daftar lagu yang bisa dipilih lewat settings */
+    const TRACKS = {
+      "coracao": { file: "music/Coracao_Maloqueiro.mp3", title: "Coracao Maloqueiro" },
+      "mrs-magic": { file: "music/Mrs_Magic.mp3", title: "Mrs Magic" }
+    };
+    const STORE_KEY = "xijtkt1-music-v2";
+    const DEFAULT_KEY = "mrs-magic";
+    const panel = $("#settings-panel");
+    const sToggles = $$("#menu-settings, #nav-settings-toggle");
+
+    let key = localStorage.getItem(STORE_KEY);
+    if (!TRACKS[key]) key = DEFAULT_KEY;
+    let TITLE = TRACKS[key].title;
     let hideTimer;
 
     const setUI = (playing) => {
@@ -400,6 +413,100 @@
       setUI(true);
       notify("Musik aktif — " + TITLE);
     };
+
+    /* ——— ganti lagu via settings ——— */
+    const setPanel = (state) => {
+      if (!panel) {
+        document.body.style.overflow = "";
+        return;
+      }
+      panel.classList.toggle("is-open", state);
+      panel.setAttribute("aria-hidden", String(!state));
+      panel.setAttribute("aria-modal", String(state));
+      if (sToggles.length) sToggles.forEach((t) => {
+        t.classList.toggle("is-active", state);
+        t.setAttribute("aria-expanded", String(state));
+      });
+      document.body.style.overflow = state ? "hidden" : "";
+      if (state) {
+        setTimeout(() => $(".settings__close", panel)?.focus(), 120);
+      }
+    };
+
+    /* fokus terperangkap di dalam panel selama terbuka */
+    const trapFocus = (e) => {
+      if (e.key !== "Tab" || !panel?.classList.contains("is-open")) return;
+      const f = $$("button", panel).filter((el) => el.offsetParent !== null);
+      if (!f.length) return;
+      const first = f[0];
+      const last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    const selectTrack = (newKey, opts = {}) => {
+      if (!TRACKS[newKey] || newKey === key) return;
+      key = newKey;
+      TITLE = TRACKS[key].title;
+      audio.src = TRACKS[key].file;
+      audio.load();
+      localStorage.setItem(STORE_KEY, key);
+      const label = $(".music-dock__label", dock);
+      if (label) label.textContent = TITLE;
+      if (panel) $$(".settings__item", panel).forEach((el) => {
+        const on = el.dataset.song === key;
+        el.classList.toggle("is-active", on);
+        el.setAttribute("aria-pressed", String(on));
+      });
+      if (opts.play) {
+        audio.muted = false;
+        audio.play()
+          .then(() => { setUI(true); notify("Musik aktif — " + TITLE); })
+          .catch(() => {});
+      }
+    };
+
+    if (sToggles.length) sToggles.forEach((t) =>
+      t.addEventListener("click", () => setPanel(!panel.classList.contains("is-open")))
+    );
+    if (panel) {
+      $("#settings-close", panel)?.addEventListener("click", () => setPanel(false));
+      document.addEventListener("click", (e) => {
+        if (!panel.classList.contains("is-open")) return;
+        if (panel.contains(e.target)) return;
+        if (sToggles.some((t) => t.contains(e.target))) return;
+        setPanel(false);
+      });
+      $$(".settings__item", panel).forEach((el) =>
+        el.addEventListener("click", () => {
+          if (el.dataset.song !== key) selectTrack(el.dataset.song, { play: true });
+          setPanel(false);
+        })
+      );
+      addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && panel.classList.contains("is-open")) setPanel(false);
+      });
+      panel.addEventListener("keydown", trapFocus);
+      document.addEventListener("xijtkt1:close-settings", () => setPanel(false));
+    }
+
+    /* tampilkan pilihan yang aktif + gambar lagu persisten jika bukan bawaan */
+    if (key !== DEFAULT_KEY) {
+      audio.src = TRACKS[key].file;
+      audio.load();
+    }
+    const label = $(".music-dock__label", dock);
+    if (label) label.textContent = TITLE;
+    if (panel) $$(".settings__item", panel).forEach((el) => {
+      const on = el.dataset.song === key;
+      el.classList.toggle("is-active", on);
+      el.setAttribute("aria-pressed", String(on));
+    });
 
     dock.addEventListener("click", () => {
       if (audio.muted) { unmute(); return; }
