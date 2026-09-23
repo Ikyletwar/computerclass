@@ -41,7 +41,7 @@ library UI, tanpa build step. Cukup buka dan langsung jalan.
 | 📱 **Responsif** | **Mobile-first** — dioptimalkan untuk layar sentuh, tap target ≥44px, safe-area iOS |
 | 🎬 **Animasi** | Preloader counter, reveal-on-scroll, hero line-mask, marquee, staggered menu, shimmer cards |
 | ✨ **Micro-interaksi** | Custom cursor (blend-difference), tombol *magnetic*, teks *scramble*, scramble di hover |
-| 🎵 **Musik** | Autoplay + loop, 2 lagu pilihan (Mrs Magic & Coracao Maloqueiro), dock player equalizer, menu settings, toast notifikasi |
+| 🎵 **Musik** | Autoplay + loop, 3 lagu pilihan (Mrs Magic, Coracao Maloqueiro & Great Expectation), dock player equalizer, menu settings, toast notifikasi |
 | 👥 **Konten** | Tentang, Pengurus Kelas, Daftar Siswa (29 siswa), Galeri Lab, Gallery Kelas, Jadwal, Creator |
 | 🖼️ **Galeri** | Tile + lightbox dengan navigasi keyboard `←` `/` `→` `/` `Esc` |
 | ♿ **Aksesibilitas** | `prefers-reduced-motion`, aria-label, semantik HTML, fokus keyboard |
@@ -74,6 +74,7 @@ XI_TJKT1/
 │   └── galeri/            # Foto kegiatan (20 tile)
 ├── music/
 │   ├── Coracao_Maloqueiro.mp3
+│   ├── Great_Expectation.mp3
 │   └── Mrs_Magic.mp3
 └── README.md
 ```

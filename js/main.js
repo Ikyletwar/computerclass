@@ -346,7 +346,8 @@
     /* daftar lagu yang bisa dipilih lewat settings */
     const TRACKS = {
       "coracao": { file: "music/Coracao_Maloqueiro.mp3", title: "Coracao Maloqueiro" },
-      "mrs-magic": { file: "music/Mrs_Magic.mp3", title: "Mrs Magic" }
+      "mrs-magic": { file: "music/Mrs_Magic.mp3", title: "Mrs Magic" },
+      "great-expectation": { file: "music/Great_Expectation.mp3", title: "Great Expectation" }
     };
     const STORE_KEY = "xijtkt1-music-v2";
     const DEFAULT_KEY = "mrs-magic";
