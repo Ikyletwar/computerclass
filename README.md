@@ -155,7 +155,7 @@ dimatikan otomatis.
 
 ## — Creator —
 
-**Hikia Letwar** — pembuat situs kelas.
+**Hizkia Letwar** — pembuat situs kelas.
 
 [![GitHub](https://img.shields.io/badge/GitHub-ikyletwar-black?style=social&logo=github)](https://github.com/ikyletwar)
 [![Instagram](https://img.shields.io/badge/Instagram-ikyletwar-black?style=social&logo=instagram)](https://www.instagram.com/ikyletwar/)
