@@ -358,12 +358,40 @@
 
     video.addEventListener("loadedmetadata", applyAspect);
 
+    const toggleBtn = $(".lightbox__toggle", lb);
+    const setToggleUI = () => {
+      if (!toggleBtn) return;
+      const paused = video.paused;
+      toggleBtn.classList.toggle("is-paused", paused);
+      toggleBtn.setAttribute("aria-label", paused ? "Putar video" : "Jeda video");
+      toggleBtn.hidden = false;
+    };
+
+    video.addEventListener("play", setToggleUI);
+    video.addEventListener("pause", setToggleUI);
+
+    const togglePlay = (e) => {
+      e?.preventDefault?.();
+      e?.stopPropagation?.();
+      if (video.paused) video.play().catch(() => {});
+      else video.pause();
+    };
+
+    toggleBtn?.addEventListener("click", togglePlay);
+
+    /* jangan biarkan interaksi di dalam frame menutup lightbox */
+    frame.addEventListener("click", (e) => e.stopPropagation());
+
     const close = () => {
       video.pause();
       video.removeAttribute("src");
       video.load();
       frame.style.aspectRatio = "";
       frame.classList.remove("is-portrait");
+      if (toggleBtn) {
+        toggleBtn.hidden = true;
+        toggleBtn.classList.remove("is-paused");
+      }
       lb.classList.remove("is-open");
       document.body.style.overflow = "";
       if (music && music.paused) music.play().catch(() => {});
@@ -376,7 +404,12 @@
         caption.textContent = t.dataset.caption || "";
         lb.classList.add("is-open");
         document.body.style.overflow = "hidden";
-        video.play().catch(() => {});
+        if (toggleBtn) {
+          toggleBtn.hidden = false;
+          toggleBtn.classList.add("is-paused");
+          toggleBtn.setAttribute("aria-label", "Putar video");
+        }
+        video.play().catch(() => setToggleUI());
       })
     );
 
@@ -385,7 +418,14 @@
       if (e.target === lb) close();
     });
     addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && lb.classList.contains("is-open")) close();
+      if (!lb.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === " " || e.key === "k" || e.key === "K") {
+        const ae = document.activeElement;
+        if (ae && ae !== document.body && ae.tagName !== "VIDEO" && ae !== toggleBtn) return;
+        e.preventDefault();
+        togglePlay();
+      }
     });
   }
 

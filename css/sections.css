@@ -1026,6 +1026,7 @@
 }
 
 .lightbox__frame--video {
+  position: relative;
   width: min(960px, 100%);
   max-height: calc(100svh - 7rem);
   aspect-ratio: 16 / 9;
@@ -1045,6 +1046,66 @@
   object-fit: contain;
   border-radius: var(--radius-md);
   background: #000;
+  cursor: pointer;
+}
+
+/* Tombol play/pause overlay (lebih mudah ditekan dari kontrol native) */
+.lightbox__toggle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(10, 10, 11, 0.72);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              background var(--dur-fast) var(--ease-out),
+              opacity var(--dur-fast) var(--ease-out);
+}
+
+.lightbox__toggle:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+  border-color: var(--white);
+  background: rgba(10, 10, 11, 0.88);
+}
+
+.lightbox__toggle svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.lightbox__toggle .ic-pause { display: none; }
+.lightbox__toggle .ic-play  { display: block; }
+.lightbox__toggle:not(.is-paused) .ic-pause { display: block; }
+.lightbox__toggle:not(.is-paused) .ic-play  { display: none; }
+
+/* saat sedang diputar: tombol tetap bisa ditekan, lebih tipis supaya video enak ditonton */
+.lightbox__toggle:not(.is-paused) {
+  opacity: 0.35;
+}
+
+.lightbox__frame--video:hover .lightbox__toggle:not(.is-paused),
+.lightbox__toggle:not(.is-paused):hover,
+.lightbox__toggle:not(.is-paused):focus-visible {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .lightbox__toggle {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
