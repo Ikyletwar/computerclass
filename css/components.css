@@ -29,7 +29,8 @@
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  gap: var(--space-2);
+  gap: var(--space-1);
+  min-width: 0;
 }
 
 .nav__brand {
@@ -37,6 +38,7 @@
   align-items: baseline;
   gap: 0.6rem;
   min-width: 0;
+  flex-shrink: 0;
 }
 
 .nav__mark {
@@ -83,24 +85,51 @@
 .nav__toggle.is-open span:nth-child(2) { width: 26px; transform: translateY(-3.5px) rotate(-45deg); }
 
 @media (min-width: 980px) {
-  .nav__inner { height: 76px; }
+  .nav__inner {
+    height: 76px;
+    gap: clamp(0.4rem, 0.8vw, var(--space-2));
+    justify-content: flex-start;
+  }
   .nav__mark { font-size: 1.15rem; }
+  .nav__sub { display: none; }
   .nav__links {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: clamp(0.3rem, 0.75vw, var(--space-2));
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: visible;
   }
-  .nav .nav__cta { display: inline-flex; margin-left: var(--space-2); }
+  .nav .nav__cta {
+    display: inline-flex;
+    margin-left: auto;
+    flex-shrink: 0;
+    min-height: 36px;
+    padding: 0.45rem 0.85rem;
+    font-size: var(--fs-xs);
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
   .nav__toggle { display: none; }
+  .nav__settings { margin-left: 0; }
+}
+
+@media (min-width: 1200px) {
+  .nav__sub { display: inline; }
+  .nav__links { gap: clamp(0.5rem, 0.9vw, var(--space-2)); }
 }
 
 .nav__link {
   position: relative;
-  padding: 0.45rem 0.2rem;
-  font-size: var(--fs-sm);
+  padding: 0.45rem 0.12rem;
+  font-size: clamp(0.68rem, 0.78vw, 0.8125rem);
   color: var(--text-muted);
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: color var(--dur-fast) var(--ease-out);
 }
 
@@ -844,7 +873,7 @@ body.menu-open .nav { z-index: 140; }
   justify-content: center;
   width: 38px;
   height: 38px;
-  margin-left: var(--space-2);
+  margin-left: var(--space-1);
   border: 1px solid var(--line);
   border-radius: var(--radius-full);
   background: transparent;

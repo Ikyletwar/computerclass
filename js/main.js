@@ -342,14 +342,28 @@
     if (!tiles.length || !lb) return;
 
     const video = $("video", lb);
+    const frame = $(".lightbox__frame--video", lb);
     const caption = $(".lightbox__caption", lb);
     const music = $("#music");
-    if (!video) return;
+    if (!video || !frame) return;
+
+    const applyAspect = () => {
+      const w = video.videoWidth;
+      const h = video.videoHeight;
+      if (!w || !h) return;
+      frame.style.aspectRatio = `${w} / ${h}`;
+      if (h > w) frame.classList.add("is-portrait");
+      else frame.classList.remove("is-portrait");
+    };
+
+    video.addEventListener("loadedmetadata", applyAspect);
 
     const close = () => {
       video.pause();
       video.removeAttribute("src");
       video.load();
+      frame.style.aspectRatio = "";
+      frame.classList.remove("is-portrait");
       lb.classList.remove("is-open");
       document.body.style.overflow = "";
       if (music && music.paused) music.play().catch(() => {});

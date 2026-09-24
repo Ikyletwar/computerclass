@@ -1033,6 +1033,11 @@
   padding: 0;
 }
 
+.lightbox__frame--video.is-portrait {
+  width: min(420px, calc((100svh - 7rem) * 9 / 16), 100%);
+  aspect-ratio: 9 / 16;
+}
+
 .lightbox__frame--video video {
   width: 100%;
   height: 100%;
