@@ -65,6 +65,7 @@
         <a class="nav__link" href="#siswa">Siswa</a>
         <a class="nav__link" href="#galeri">Galeri</a>
         <a class="nav__link" href="#gallery-kelas">Gallery Kelas</a>
+        <a class="nav__link" href="#video">Video</a>
         <a class="nav__link" href="#jadwal">Jadwal</a>
         <a class="nav__link" href="#kontak">Kontak</a>
         <a class="nav__link" href="#creator">Creator</a>
@@ -95,11 +96,12 @@
       <a class="menu__link" href="#siswa"><span>04</span>Daftar Siswa</a>
       <a class="menu__link" href="#galeri"><span>05</span>Galeri</a>
       <a class="menu__link" href="#gallery-kelas"><span>06</span>Gallery Kelas</a>
-      <a class="menu__link" href="#jadwal"><span>07</span>Jadwal</a>
-      <a class="menu__link" href="#kontak"><span>08</span>Kontak</a>
-      <a class="menu__link" href="#creator"><span>09</span>Creator</a>
+      <a class="menu__link" href="#video"><span>07</span>Video</a>
+      <a class="menu__link" href="#jadwal"><span>08</span>Jadwal</a>
+      <a class="menu__link" href="#kontak"><span>09</span>Kontak</a>
+      <a class="menu__link" href="#creator"><span>10</span>Creator</a>
       <button class="menu__link menu__settings" id="menu-settings" aria-expanded="false">
-        <span>10</span>Settings Musik
+        <span>11</span>Settings Musik
       </button>
     </nav>
     <div class="menu__footer">
@@ -802,12 +804,47 @@
 </section>
 
 
+    <!-- ===================== VIDEO ===================== -->
+    <section class="section section--border" id="video">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="overline" data-reveal>06 — Video Kelas</span>
+            <h2 class="heading-display" data-reveal data-delay="80">Tonton bersama</h2>
+          </div>
+          <span class="section__index" data-reveal data-delay="160">01 / Video</span>
+        </div>
+
+        <div class="videowall">
+          <button class="tile tile--video" type="button"
+                  data-video="video/video1.mp4"
+                  data-caption="Video 1 — Dokumentasi kelas">
+            <span class="tile__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+            <span class="tile__tag">01 — Video</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox video -->
+    <div class="lightbox lightbox--video" role="dialog" aria-modal="true" aria-label="Pemutar video">
+      <button class="lightbox__close" aria-label="Tutup video">✕</button>
+      <div>
+        <div class="lightbox__frame lightbox__frame--video">
+          <video controls playsinline preload="none"></video>
+        </div>
+        <p class="lightbox__caption"></p>
+      </div>
+    </div>
+
     <!-- ===================== JADWAL ===================== -->
     <section class="section section--border" id="jadwal">
       <div class="container">
         <div class="schedule__wrap">
           <div class="schedule__intro">
-            <span class="overline" data-reveal>06 — Perjalanan</span>
+            <span class="overline" data-reveal>07 — Perjalanan</span>
             <h2 class="heading-display" data-reveal data-delay="80">Jadwal<br />kegiatan kelas</h2>
             <p class="text-muted u-mt-2" data-reveal data-delay="160">
               Satu tahun, banyak koneksi. Ini peta perjalanan kelas kami
@@ -851,7 +888,7 @@
       <div class="grid-pattern" style="mask-image: radial-gradient(ellipse 70% 60% at 50% 100%, black 45%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 100%, black 45%, transparent 100%);" aria-hidden="true"></div>
 
       <div class="container container--small">
-        <span class="overline" data-reveal>07 — Kontak &amp; Sosial</span>
+        <span class="overline" data-reveal>08 — Kontak &amp; Sosial</span>
         <h2 class="cta__title heading-display" data-reveal data-delay="80">
           Ikuti perjalanan kami — <em>satu koneksi</em> pada satu waktu.
         </h2>
@@ -878,7 +915,7 @@
           </div>
 
           <div>
-            <span class="overline" data-reveal>08 — Creator</span>
+            <span class="overline" data-reveal>09 — Creator</span>
             <h2 class="heading-display creator__name" data-reveal data-delay="80">Hizkia Letwar</h2>
             <p class="creator__role" data-reveal data-delay="140">Pembuat situs kelas XI TJKT 1</p>
             <p class="creator__bio text-muted" data-reveal data-delay="200">
@@ -933,6 +970,7 @@
             <a href="#siswa">Siswa</a>
             <a href="#galeri">Galeri</a>
             <a href="#gallery-kelas">Gallery Kelas</a>
+            <a href="#video">Video</a>
             <a href="#jadwal">Jadwal</a>
           </div>
           <div class="footer__col">

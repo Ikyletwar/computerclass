@@ -188,6 +188,7 @@ body.menu-open .nav { z-index: 140; }
 .menu.is-open .menu__link:nth-child(8) { transition-delay: 0.38s; }
 .menu.is-open .menu__link:nth-child(9) { transition-delay: 0.42s; }
 .menu.is-open .menu__link:nth-child(10) { transition-delay: 0.46s; }
+.menu.is-open .menu__link:nth-child(11) { transition-delay: 0.5s; }
 
 .menu__link:hover { color: var(--text-muted); transform: translateX(8px); }
 

@@ -282,8 +282,8 @@
      LIGHTBOX GALERI
   ———————————————— */
   function lightbox() {
-    const tiles = $$(".tile");
-    const lb = $(".lightbox");
+    const tiles = $$(".tile:not(.tile--video)");
+    const lb = $(".lightbox:not(.lightbox--video)");
     if (!tiles.length || !lb) return;
 
     const frame = $(".lightbox__frame", lb);
@@ -330,6 +330,48 @@
       if (e.key === "Escape") close();
       if (e.key === "ArrowLeft") show(idx - 1);
       if (e.key === "ArrowRight") show(idx + 1);
+    });
+  }
+
+  /* ————————————————
+     LIGHTBOX VIDEO
+  ———————————————— */
+  function videoLightbox() {
+    const tiles = $$(".tile--video");
+    const lb = $(".lightbox--video");
+    if (!tiles.length || !lb) return;
+
+    const video = $("video", lb);
+    const caption = $(".lightbox__caption", lb);
+    const music = $("#music");
+    if (!video) return;
+
+    const close = () => {
+      video.pause();
+      video.removeAttribute("src");
+      video.load();
+      lb.classList.remove("is-open");
+      document.body.style.overflow = "";
+      if (music && music.paused) music.play().catch(() => {});
+    };
+
+    tiles.forEach((t) =>
+      t.addEventListener("click", () => {
+        if (music && !music.paused) music.pause();
+        video.src = t.dataset.video || "";
+        caption.textContent = t.dataset.caption || "";
+        lb.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        video.play().catch(() => {});
+      })
+    );
+
+    $(".lightbox__close", lb)?.addEventListener("click", close);
+    lb.addEventListener("click", (e) => {
+      if (e.target === lb) close();
+    });
+    addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lb.classList.contains("is-open")) close();
     });
   }
 
@@ -539,6 +581,7 @@
     magnetic();
     scramble();
     lightbox();
+    videoLightbox();
     musicPlayer();
   });
 })();

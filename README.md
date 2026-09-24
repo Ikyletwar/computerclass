@@ -42,8 +42,9 @@ library UI, tanpa build step. Cukup buka dan langsung jalan.
 | 🎬 **Animasi** | Preloader counter, reveal-on-scroll, hero line-mask, marquee, staggered menu, shimmer cards |
 | ✨ **Micro-interaksi** | Custom cursor (blend-difference), tombol *magnetic*, teks *scramble*, scramble di hover |
 | 🎵 **Musik** | Autoplay + loop, 3 lagu pilihan (Mrs Magic, Coracao Maloqueiro & Great Expectation), dock player equalizer, menu settings, toast notifikasi |
-| 👥 **Konten** | Tentang, Pengurus Kelas, Daftar Siswa (29 siswa), Galeri Lab, Gallery Kelas, Jadwal, Creator |
+| 👥 **Konten** | Tentang, Pengurus Kelas, Daftar Siswa (29 siswa), Galeri Lab, Gallery Kelas, Video, Jadwal, Creator |
 | 🖼️ **Galeri** | Tile + lightbox dengan navigasi keyboard `←` `/` `→` `/` `Esc` |
+| 🎬 **Video** | Section video + lightbox player (kontrol bawaan browser: play, volume, fullscreen), jeda musik otomatis saat diputar |
 | ♿ **Aksesibilitas** | `prefers-reduced-motion`, aria-label, semantik HTML, fokus keyboard |
 
 ## — Teknologi —
@@ -52,7 +53,7 @@ library UI, tanpa build step. Cukup buka dan langsung jalan.
 |---|---|
 | **HTML5** | Struktur semantik satu halaman (`index.html`) |
 | **CSS3** | Design system berbasis *custom properties* (`tokens.css`), struktur **mobile-first** |
-| **Vanilla JS (ES2020)** | Preloader, kursor, reveal, magnetik, counter, lightbox, musik, menu |
+| **Vanilla JS (ES2020)** | Preloader, kursor, reveal, magnetik, counter, lightbox, video, musik, menu |
 | **Inline SVG** | Seluruh ikon (tanpa emoji/emoticon) |
 | **Google Fonts** | `Fraunces`, `Space Grotesk`, `Space Mono` |
 
@@ -76,6 +77,8 @@ XI_TJKT1/
 │   ├── Coracao_Maloqueiro.mp3
 │   ├── Great_Expectation.mp3
 │   └── Mrs_Magic.mp3
+├── video/
+│   └── video1.mp4           # Video kelas (ditonton via lightbox)
 └── README.md
 ```
 
@@ -108,6 +111,7 @@ python3 -m http.server 8080
 | **Daftar 29 siswa** | `index.html` → section `id="siswa"` (kartu `Nama Siswa XX`) |
 | **Foto siswa/pengurus** | Ganti isi `.student__photo` / `.crewcard__photo` dengan `<img>` |
 | **Galeri** | Section `id="galeri"` & `id="gallery-kelas"` (tile + caption) |
+| **Video** | Tambah MP4 di `video/`, duplikat tile `.tile--video` (isi `data-video` + `data-caption`) |
 | **Musik** | Tambah file di `music/`, lalu daftarkan lagu di `js/main.js` → objek `TRACKS` |
 | **Judul lagu & pilihan** | `js/main.js` → objek `TRACKS` (file + judul), default di `DEFAULT_KEY` |
 | **Link sosial creator** | Section `id="creator"` → tombol `.social-btn` |
